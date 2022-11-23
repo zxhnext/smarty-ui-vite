@@ -1,0 +1,58 @@
+/*
+ * @Description: 
+ * @Author: zhaoxiaohan03@kuaishou.com
+ * @Date: 2022-11-22 23:42:49
+ * @LastEditors: zhaoxiaohan03@kuaishou.com
+ * @LastEditTime: 2022-11-23 21:20:00
+ */
+/// <reference types="vitest" />
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import Unocss from "./config/unocss";
+
+const rollupOptions = {
+    external: ["vue", "vue-router"],
+    output: {
+        globals: {
+            vue: "Vue",
+        },
+    },
+};
+
+// https://vitejs.dev/config/
+
+export default defineConfig({
+
+    plugins: [
+        vue(),
+        vueJsx({
+            // options are passed on to @vue/babel-plugin-jsx
+        }),
+        // 添加UnoCSS插件
+        Unocss(),
+    ],
+    build: {
+        rollupOptions,
+        minify: false,
+        cssCodeSplit: true, // unocss打包报错问题
+        lib: {
+            entry: "./src/entry.ts",
+            name: "SmartyUI",
+            fileName: "smarty-ui",
+            // 导出模块格式
+            formats: ["esm", "umd","iife"],
+        },
+    },
+    test: {
+        // enable jest-like global test APIs
+        globals: true,
+        // simulate DOM with happy-dom
+        // (requires installing happy-dom as a peer dependency)
+        environment: 'happy-dom',
+        // 支持tsx组件，很关键
+        transformMode: {
+          web: [/.[tj]sx$/]
+        }
+    }
+});
