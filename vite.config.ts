@@ -3,7 +3,7 @@
  * @Author: zhaoxiaohan03@kuaishou.com
  * @Date: 2022-11-22 23:42:49
  * @LastEditors: zhaoxiaohan03@kuaishou.com
- * @LastEditTime: 2022-11-23 21:20:00
+ * @LastEditTime: 2022-11-24 10:24:54
  */
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
@@ -34,7 +34,9 @@ export default defineConfig({
     ],
     build: {
         rollupOptions,
-        minify: false,
+        minify: 'terser', // 混淆 boolean | 'terser' | 'esbuild'
+        sourcemap: true, // 输出单独 source文件
+        brotliSize: true,  // 生成压缩大小报告
         cssCodeSplit: true, // unocss打包报错问题
         lib: {
             entry: "./src/entry.ts",
