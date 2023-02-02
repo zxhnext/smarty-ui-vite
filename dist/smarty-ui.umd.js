@@ -91,7 +91,7 @@ document.head.appendChild(__vite_style__);
   const JSXButton = /* @__PURE__ */ vue.defineComponent({
     name: "JSXButton",
     render() {
-      return vue.createVNode("button", null, [vue.createTextVNode("JSX Button")]);
+      return vue.h("button", null, "JSXButton");
     }
   });
   const entry = {

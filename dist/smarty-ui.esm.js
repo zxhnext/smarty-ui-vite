@@ -1,4 +1,4 @@
-import { defineComponent, createVNode, openBlock, createElementBlock, createTextVNode } from "vue";
+import { defineComponent, createVNode, openBlock, createElementBlock, h } from "vue";
 const __uno = "";
 const props = {
   size: {
@@ -85,7 +85,7 @@ const SFCButton = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render
 const JSXButton = /* @__PURE__ */ defineComponent({
   name: "JSXButton",
   render() {
-    return createVNode("button", null, [createTextVNode("JSX Button")]);
+    return h("button", null, "JSXButton");
   }
 });
 const entry = {

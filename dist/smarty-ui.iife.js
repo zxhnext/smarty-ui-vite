@@ -89,7 +89,7 @@ var SmartyUI = function(exports, vue) {
   const JSXButton = /* @__PURE__ */ vue.defineComponent({
     name: "JSXButton",
     render() {
-      return vue.createVNode("button", null, [vue.createTextVNode("JSX Button")]);
+      return vue.h("button", null, "JSXButton");
     }
   });
   const entry = {

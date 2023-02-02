@@ -1,5 +1,5 @@
 import Theme from 'vitepress/dist/client/theme-default';
-import SmartyUI from '../../../src/entry';
+import SmartyUI from '../../../packages/entry';
 
 // 主题样式
 import 'vitepress-theme-demoblock/theme/styles/index.css';

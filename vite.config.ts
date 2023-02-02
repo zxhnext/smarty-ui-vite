@@ -27,7 +27,7 @@ export default defineConfig({
         minify: false,
         cssCodeSplit: true, // 单独导出css
         lib: {
-            entry: './src/entry.ts',
+            entry: './packages/entry.ts',
             name: 'SmartyUI',
             fileName: 'smarty-ui',
             // 导出模块格式
