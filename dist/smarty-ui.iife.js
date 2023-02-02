@@ -106,3 +106,4 @@ var SmartyUI = function(exports, vue) {
   Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
   return exports;
 }({}, Vue);
+//# sourceMappingURL=smarty-ui.iife.js.map

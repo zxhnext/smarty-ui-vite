@@ -25,6 +25,7 @@ export default defineConfig({
     build: {
         rollupOptions,
         minify: false,
+        sourcemap: true, // 输出单独 source文件
         cssCodeSplit: true, // 单独导出css
         lib: {
             entry: './packages/entry.ts',

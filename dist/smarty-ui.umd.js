@@ -107,3 +107,4 @@ document.head.appendChild(__vite_style__);
   exports2.default = entry;
   Object.defineProperties(exports2, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 });
+//# sourceMappingURL=smarty-ui.umd.js.map
